@@ -1,4 +1,19 @@
 //program
+#include <iostream>
+using namespace std;
+
+string kontainer[100];
+int index_kontainer = 0;
+int harga_total = 0;
+
+void beli(int &pilih, int &panjang, string merk[], int harga[]) {
+
+}
+
+void VGA() {
+
+}
+//Khalid Al Hafiza
 
 void CPU() {
 
