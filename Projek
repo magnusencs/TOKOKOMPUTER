@@ -27,6 +27,10 @@ void RAM() {
 
 void ROM() {
 
+}
+
 void MOTHERBOARD() {
+
+}
 
 //Khoirotun Khisani Putri
