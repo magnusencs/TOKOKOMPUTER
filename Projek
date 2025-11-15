@@ -30,3 +30,13 @@ void ROM() {
 void MOTHERBOARD() {
 
 //Khoirotun Khisani Putri
+
+void PC_CASE() {
+
+}
+
+void show_part() {
+
+}
+
+//Febian Gita Cheria
