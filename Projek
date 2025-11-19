@@ -31,11 +31,8 @@ void CPU(){
     cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
     cin>>lagi;
      }
-    
-
     while (tolower(lagi) == 'y');
 }
-    
 
 
 void RAM(){
@@ -54,19 +51,47 @@ void RAM(){
     cin>>lagi;
     }
     while (tolower(lagi) == 'y');
-    
 }
 //Julia Andini
 
-void ROM() {
 
+void ROM() {
+    char lagi;
+    do {
+    string merk[5] = {"Samsung EVO", "Western Digital Blue", "Crucial MX", "Kingston A2000", "Seagate Barracuda"};
+    int harga[5] = {1000000, 900000, 950000, 850000, 800000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih rom yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga); 
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+    }
+    while (tolower(lagi) == 'y');
 }
 
 void MOTHERBOARD() {
-
+    char lagi;
+    do {
+    string merk[5] = {"ASUS ROG", "MSI MPG", "Gigabyte Aorus", "ASRock Phantom", "EVGA Dark"};
+    int harga[5] = {2500000, 2200000, 2400000, 2100000, 2600000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih motherboard yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+    }
+    while (tolower(lagi) == 'y');
 }
-
 //Khoirotun Khisani Putri
+
 
 void PC_CASE() {
 
