@@ -240,6 +240,5 @@ int main ()
     cout<<"Total harga: Rp "<<harga_total<<endl;
     cout<<"Terima kasih telah menggunakan program kami!"<<endl;
     return 0;
-}
-habiburahman al-qomairi
+) 
 //Habiburahman Al-Qomairi
