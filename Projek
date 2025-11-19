@@ -15,14 +15,47 @@ void VGA() {
 }
 //Khalid Al Hafiza
 
-void CPU() {
+void CPU(){
+    char lagi;
+    do {
+    string merk[5] = {"Intel i5", "Intel i7", "AMD Ryzen 5", "AMD Ryzen 7", "Intel i9"};
+    int harga[5] = {2000000, 3000000, 2500000, 3500000, 5000000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih VGA yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+     }
+    
 
+    while (tolower(lagi) == 'y');
 }
+    
 
-void RAM() {
 
+void RAM(){
+    char lagi;
+    do {
+    string merk[5] = {"Corsair Vengeance", "G.Skill Trident Z", "Kingston HyperX", "Crucial Ballistix", "Patriot Viper"};
+    int harga[5] = {800000, 900000, 750000, 850000, 700000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih ram yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+    }
+    while (tolower(lagi) == 'y');
+    
 }
-
 //Julia Andini
 
 void ROM() {
