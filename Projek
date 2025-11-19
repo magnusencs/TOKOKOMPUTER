@@ -6,12 +6,43 @@ string kontainer[100];
 int index_kontainer = 0;
 int harga_total = 0;
 
+
 void beli(int &pilih, int &panjang, string merk[], int harga[]) {
 
+    if (pilih >= 1 && pilih <= panjang)
+    {
+        kontainer[index_kontainer] = merk[pilih - 1];
+        index_kontainer++;
+        cout<<"Anda memilih: "<<merk[pilih - 1]<<" dengan harga: Rp "<<harga[pilih - 1]<<endl;
+        harga_total += harga[pilih - 1];
+    }
+    else
+    {
+        cout<<"Pilihan tidak valid."<<endl;
+        return;
+    }
 }
 
-void VGA() {
 
+void VGA(){
+    char lagi;
+    do {
+    string merk[5] = {"RTX 3060", "GTX 1660", "RX 6600", "RTX 2080", "GTX 1050 Ti"};
+    int harga[5] = {5000000, 4000000, 4500000, 7000000, 3000000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih VGA yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+    }
+    while (tolower(lagi) == 'y');
+    
+    
 }
 //Khalid Al Hafiza
 
