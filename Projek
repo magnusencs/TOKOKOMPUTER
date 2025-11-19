@@ -93,14 +93,65 @@ void MOTHERBOARD() {
 //Khoirotun Khisani Putri
 
 
-void PC_CASE() {
-
 }
+
+void PC_CASE(){
+    char lagi;
+    do {
+    string merk[5] = {"NZXT H510", "Corsair 4000D", "Fractal Design Meshify", "Cooler Master MasterBox", "Lian Li PC-O11"};
+    int harga[5] = {1000000, 900000, 950000, 850000, 1200000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i )
+    cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
+    cout<<"Pilih pc case yang anda inginkan: ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cin>>lagi;
+    } while (tolower(lagi) == 'y');
+}
+
 
 void show_part() {
-
+    char lagi;
+    do{
+    system("cls");
+    string parts[7] = {"VGA", "CPU", "RAM", "ROM", "MOTHERBOARD", "PC CASE", "Keluar"};
+    int panjang_part = sizeof(parts)/sizeof(parts[0]);
+    for (int i = 0; i<panjang_part; ++i )
+    cout<<i+1<<". "<<parts[i]<<endl;
+    cout<<"mau pilih yang mana?"<<endl;
+    int pilih;
+    cin>>pilih;
+    switch (pilih) {
+        case 1:
+            VGA();
+            break;
+        case 2:
+            CPU();
+            break;
+        case 3:
+            RAM();
+            break;
+        case 4:
+            ROM();
+            break;
+        case 5:
+            MOTHERBOARD();
+            break;
+        case 6:
+            PC_CASE();
+            break;
+        case 7: break;
+        default:
+            cout<<"Pilihan tidak valid."<<endl;
+            break;
+    }
+    cout<<"Apakah anda ingin kembali ke menu bagian PC? (y/n): ";
+    cin>>lagi;
+    } while (tolower(lagi) == 'y');
 }
-
 //Febian Gita Cheria
 
 void show_laptop() {
