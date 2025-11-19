@@ -184,14 +184,62 @@ void show_part() {
     } while (tolower(lagi) == 'y');
 }
 //Febian Gita Cheria
-
-void show_laptop() {
+void show_laptop()
+{
+ char lagi;
+ do {
+    system("cls");
+    cout<<"Daftar Laptop yang tersedia: "<<endl;
+    string merk[5] = {"Asus ROG", "Dell XPS", "MacBook Pro", "HP Spectre", "Lenovo ThinkPad"};
+    int harga[5] = {12000000, 15000000, 20000000, 13000000, 14000000};
+    int panjang = sizeof(merk)/sizeof(merk[0]);
+    for (int i = 0; i<panjang; ++i) {
+        cout<<i+1<<". "<<merk[i]<<" harga: "<<harga[i]<<endl;
+    }
+    cout<<"mau pilih yang mana? ";
+    int pilih;
+    cin>>pilih;
+    beli(pilih, panjang, merk, harga);
+    cout<< "apa mau beli lagi? ";
+    cin>>lagi;
+}
+while (tolower(lagi) == 'y');
 
 }
 
-int main() {
-
+int main () 
+{
+    char lagi;
+     do {
+     system("cls");
+     system("color 78");
+    cout<<"Selamat Datang di program Toko Komputer!\n";
+    cout<<"1. Bagian PC"<<endl;
+    cout<<"2. laptop"<<endl;
+    cout<<"3. Keluar"<<endl;
+    int ask;
+    cin>>ask;
+    if (ask == 1) {
+        show_part();
+    } else if (ask == 2) {
+        show_laptop();
+    } else if (ask == 3) {
+        lagi = 'n';
+        break;
+    }
+        else {
+        cout<<"Pilihan tidak valid."<<endl;
+    }
+    cout<<"Apakah anda ingin kembali ke menu utama? (y/n): ";
+    cin>>lagi;}
+    while (tolower(lagi));
+    
+    cout<<"Komponen yang anda pilih: "<<endl;
+    for (int i = 0; i<index_kontainer; ++i )
+    cout<<i+1<<". "<<kontainer[i]<<endl;
+    cout<<"Total harga: Rp "<<harga_total<<endl;
+    cout<<"Terima kasih telah menggunakan program kami!"<<endl;
     return 0;
 }
-
+habiburahman al-qomairi
 //Habiburahman Al-Qomairi
