@@ -8,18 +8,16 @@ int harga_total = 0;
 
 
 void beli(int &pilih, int &panjang, string merk[], int harga[]) {
-
-    if (pilih >= 1 && pilih <= panjang)
-    {
+    if (cin.fail()) { cin.clear(); cin.ignore(10000, '\n'); cout<<"Input harus angka!"<<endl; return; }
+    
+    if (pilih >= 1 && pilih <= panjang) {
         kontainer[index_kontainer] = merk[pilih - 1];
         index_kontainer++;
         cout<<"Anda memilih: "<<merk[pilih - 1]<<" dengan harga: Rp "<<harga[pilih - 1]<<endl;
         harga_total += harga[pilih - 1];
     }
-    else
-    {
+    else {
         cout<<"Pilihan tidak valid."<<endl;
-        return;
     }
 }
 
