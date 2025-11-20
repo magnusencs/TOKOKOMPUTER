@@ -122,7 +122,7 @@ void MOTHERBOARD() {
 //Khoirotun Khisani Putri
 
 
-}
+
 
 void PC_CASE(){
     char lagi;
@@ -180,6 +180,7 @@ void show_part() {
     cout<<"Apakah anda ingin kembali ke menu bagian PC? (y/n): ";
     cin>>lagi;
     } while (tolower(lagi) == 'y');
+}
 
 //Febian Gita Cheria
 void show_laptop()
@@ -230,7 +231,7 @@ int main ()
     }
     cout<<"Apakah anda ingin kembali ke menu utama? (y/n): ";
     cin>>lagi;}
-    while (tolower(lagi));
+    while (tolower(lagi) == 'y');
     
     cout<<"Komponen yang anda pilih: "<<endl;
     for (int i = 0; i<index_kontainer; ++i )
