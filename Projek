@@ -180,7 +180,7 @@ void show_part() {
     cout<<"Apakah anda ingin kembali ke menu bagian PC? (y/n): ";
     cin>>lagi;
     } while (tolower(lagi) == 'y');
-}
+
 //Febian Gita Cheria
 void show_laptop()
 {
@@ -238,5 +238,5 @@ int main ()
     cout<<"Total harga: Rp "<<harga_total<<endl;
     cout<<"Terima kasih telah menggunakan program kami!"<<endl;
     return 0;
-) 
+}
 //Habiburahman Al-Qomairi
