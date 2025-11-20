@@ -52,7 +52,7 @@ void CPU(){
     int panjang = sizeof(merk)/sizeof(merk[0]);
     for (int i = 0; i<panjang; ++i )
     cout<<i+1<<". "<<merk[i]<<" - Rp "<<harga[i]<<endl;
-    cout<<"Pilih VGA yang anda inginkan: ";
+    cout<<"Pilih CPU yang anda inginkan: ";
     int pilih;
     cin>>pilih;
     beli(pilih, panjang, merk, harga);
