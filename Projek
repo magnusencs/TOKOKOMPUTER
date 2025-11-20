@@ -37,7 +37,7 @@ void VGA(){
     cin>>pilih;
     beli(pilih, panjang, merk, harga);
     
-    cou<<"Apakah anda ingin menambah komponen lain? (y/n): ";
+    cout<<"Apakah anda ingin menambah komponen lain? (y/n): ";
     cin>>lagi;
     }
     while (tolower(lagi) == 'y');
